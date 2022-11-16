@@ -1,0 +1,26 @@
+<div class="container">
+    <form action="extractFormVariables.py">
+        <div class="col">
+            <label for="userName">Name</label>
+            <input type="text" class="form-control" id="userName" placeholder="Tarkan" required>
+        </div>
+        <div class="col">
+            <label for="userAge">Name</label>
+            <select name="Age" id="userAge" required>
+                {% for opt in range(0, 100) %}
+                    <option class="" value={{ opt }}>{{ opt }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col">
+            <label for="userCity">Ville</label>
+            <input type="text" class="form-control" id="userCity" placeholder="Aulnay-Sous-Bois" required>
+        </div>
+        <br>
+        <div class="container text-center">
+            <row><input class="btn bg-kan-indigo" type="submit" value="Submit"></row>
+            <row><a class="btn bg-kan-indigo" href="/">Cancel</a></row>
+        </div>
+    </form>
+    {{ formResult }}
+</div>
