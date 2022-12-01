@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template("layout.html", page="index.html")
 
+@app.route('/healthz')
+def healthz():
+    return render_template("healthz.html")
+
 @app.route("/<p>", methods=['GET', 'POST', 'PUT'])
 def layout(p):
     return render_template("layout.html", page=p, templates_vars=session.get('test'))

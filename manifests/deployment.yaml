@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kanform
+  labels:
+    owner: kanform
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kanform-pyproject
+  namespace: service
+  labels:
+    app: kanform-pyproject
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kanform-pyproject
+  template:
+    metadata:
+      labels:
+        app: kanform-pyproject
+    spec:
+      containers:
+      - name: kanform-pyproject
+        image: kanform/python-project
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kanform-service
+spec:
+  selector:
+    app: kanform-pyproject
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080

@@ -3,7 +3,8 @@ FROM python:3.11
 
 ENV FLASK_APP="/site/main.py"
 COPY site /site
-RUN useradd -m kanform \
+RUN apt update && apt install vim -y \
+    && useradd -m kanform \
     && chown -R kanform:kanform /site
 
 WORKDIR /site
