@@ -27,7 +27,7 @@ then
   echo "Test failed"
 else
   echo "Successfully"
+  sleep 5
+  rm_container $container_name
 fi
 
-sleep 10
-rm_container $container_name

@@ -6,3 +6,27 @@
     background-color: hsla(115, 52%, 35%, 0.9);
     color: white
 }
+
+.kan-img-logo{
+  height: 50px;
+  width: 50px;
+  padding: 3px;
+  border-radius: 10%;
+  background-color: hsla(115,52%,35%, 0.2)
+}
+
+.kan-text-300px-width{
+  width: 300px
+}
+
+.kan-text-400px-width{
+  width: 400px
+}
+
+.kan-text-500px-width{
+  width: 500px
+}
+
+.kan-warning{
+  color: hsla(1,100%,45%, 1)
+}

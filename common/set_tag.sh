@@ -1,6 +1,6 @@
-nocss="v1.0"
+nocss="v1.2"
 green="v1.1"
-indigo=${violet:-"v1.2"}
+indigo=${violet:-"v1.0"}
 main=$indigo
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 docker_repo="kanform"
